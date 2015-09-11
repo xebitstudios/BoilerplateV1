@@ -1,0 +1,16 @@
+{
+  "name": "BoilerplateStarter",
+  "version": "0.0.0",
+  "description": "BoilerplateStarter",
+  "main": "app.js",
+  "author": {
+    "name": "aoduyela",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "express3-handlebars": "^0.5.2",
+    "underscore": "^1.8.3"
+  }
+}

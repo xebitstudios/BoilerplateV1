@@ -1,0 +1,45 @@
+﻿<div class="container body-content">
+    <div class="jumbotron">
+        <h1 class="lead">Express</h1>
+        <p>Express is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    </div>
+    <hr>
+    <div class="row container" style="margin-bottom:30px;">
+        <p class="lead">Search:</p>
+        <form class="form-inline" id="formm" role="form" method="POST" action="/search_users">
+            <div class="form-group">
+                <label for="fnameid">First Name:</label>
+                <input type="text" class="form-control" id="fnameid" placeholder="Enter First Name" style="width:350px;margin-right:10px;margin-left:5px;">
+            </div>
+            <div class="form-group">
+                <label for="lnameid">Last Name:</label>
+                <input type="text" class="form-control" id="lnameid" placeholder="Enter Last Name" style="width:350px;margin-right:10px;margin-left:5px;">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnSearch" style="vertical-align:bottom;">Search</button>
+        </form>
+    </div>
+    <hr>
+</div>
+
+
+<script>
+	$('#searchid').keypress(function(e){
+        if(e.which == 13){
+            $('#btnSearch').click();
+        }
+    });
+	$('#btnSearch').click(function () {
+	    var path = '';
+    	var form = $('#formm');
+    	if ($('#searchid').val() == '') {
+			// warn
+		} else {
+    	    var fnameVal = $('#fnameid').val();
+    	    var lnameVal = $('#lnameid').val();
+    	    path = $('#formm').attr('action') + '/' + fnameVal + '';
+	        form.attr("method", "get");
+    		form.attr("action", path);
+	        form.submit();
+		}
+    });
+</script>
