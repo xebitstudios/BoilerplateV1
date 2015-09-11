@@ -11,6 +11,7 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "express3-handlebars": "^0.5.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "forever": "*"
   }
 }
